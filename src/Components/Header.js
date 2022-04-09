@@ -16,7 +16,7 @@ function Header()
 {
     const [{ cart }, dispatch] = useStateValue();
     return <header>
-        <img className="logo" src="https://firebasestorage.googleapis.com/v0/b/freshgro-6d248.appspot.com/o/1601881328936.jpg?alt=media&token=0eac3044-5498-4d64-8a16-5b81f70538a2" alt=""/>
+        <img className="logo" src="https://firebasestorage.googleapis.com/v0/b/freshgro-6d248.appspot.com/o/chemical-mango-ora6y7i5w6yiwqhq55sw8wxlhsn4zlfb2307doe8sg.png?alt=media&token=6860f796-da53-4513-bccf-7eb21046eace" alt=""/>
         <div className="inputBox">
             <SearchRounded className="searchIcon"/>
             <input type="text" placeholder="search"/>
