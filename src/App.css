@@ -16,7 +16,7 @@ header {
   padding: 5px 15px;
   height: 60px;
   width: 100%;
-  background: #fff;
+  background: #fbe149;
   position: fixed;
   top: 0;
   left: 0;
@@ -74,7 +74,7 @@ header {
 .shoppingCart .cart_content {
   width: 20px;
   height: 20px;
-  background: #f8901c;
+  background: #55a51e;
   border-radius: 100%;
   min-width: 20px;
   min-height: 20px;

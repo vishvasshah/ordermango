@@ -76,10 +76,10 @@ function App() {
               <div className="totalSection">
                 <h3>Total</h3>
                 <p>
-                  <span>$ </span> {total}
+                  <span>₹ </span> {total}
                 </p>
               </div>
-              <button className="checkOut">Check Out</button>
+              <button className="checkOut">Check</button>
               <button className="back" onClick={closemenu}>Back To Home</button>
 
 
