@@ -31,9 +31,10 @@ function ItemCard({ itemId, imgSrc, name, price }) {
 
       <div className="itemContent">
         <h3 className="itemName">{name}</h3>
+        <div className="weight">250gm to280gm</div>
         <div className="bottom">
         <h3 className="price">
-              <span>$ </span>
+              <span>₹</span>
               {price}
             </h3>
           

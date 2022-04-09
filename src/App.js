@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import ItemCard from "./Components/ItemCard";
 import SubMenuContainer from "./Components/SubMenuContainer";
 import { Items } from "./Components/Data";
+import Checkout from './Components/CheckOut';
 import { useStateValue } from "./Components/StateProvider";
 function App() {
   const [isMainData, setMainData] = useState(Items);
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      
 
       <main>
         <div className='mainContainer'>
@@ -72,6 +74,7 @@ function App() {
                       />
                     ))}
                 </div>
+                <Checkout/>
               </div>
               <div className="totalSection">
                 <h3>Total</h3>
@@ -79,15 +82,22 @@ function App() {
                   <span>₹ </span> {total}
                 </p>
               </div>
-              <button className="checkOut">Check</button>
+              <button className="checkOut">Place your order</button>
               <button className="back" onClick={closemenu}>Back To Home</button>
 
 
             </div>
           )}
         </div>
+       {/* Left menu */}
+      <div className="footer">
+      © 2022  All rights reserved
+
+
+      </div>
           
       </main>
+      
 
       
     </div>
