@@ -4,7 +4,7 @@ import { db } from "../firebase";
 const CheckOut = () => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
-  const [message, setMessage] = useState("");
+  const [address, setAddress] = useState("");
 
   const [loader, setLoader] = useState(false);
 
@@ -16,7 +16,7 @@ const CheckOut = () => {
       .add({
         name: name,
         number: number,
-        message: message,
+        address: address,
       })
       .then(() => {
         setLoader(false);
@@ -29,18 +29,19 @@ const CheckOut = () => {
 
     setName("");
     setNumber("");
-    setMessage("");
+    setAddress("");
   };
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <h1>Contact Us 🤳</h1>
+      <h3>delivery information</h3>
 
       <label>Name</label>
       <input
         placeholder="Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        required
       />
 
       <label>number</label>
@@ -48,13 +49,14 @@ const CheckOut = () => {
         placeholder="number"
         value={number}
         onChange={(e) => setNumber(e.target.value)}
+        required
       />
 
-      <label>Message</label>
+      <label>Address</label>
       <textarea
-        placeholder="Message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
+        placeholder="Address"
+        value={address}
+        onChange={(e) => setAddress(e.target.value)}
       ></textarea>
 
       <button

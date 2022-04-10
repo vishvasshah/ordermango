@@ -4,7 +4,7 @@ const Items = [
         
       imgSrc:
         "https://firebasestorage.googleapis.com/v0/b/freshgro-6d248.appspot.com/o/alfanso(1).png?alt=media&token=6d9c8425-da38-43ea-8b60-48279f7e773a",
-      name: "devgad mangoes",
+      name: "1 dozen devgad mangoes",
       price: "900",
     },
     {
