@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../firebase";
+import swal from 'sweetalert';
 
 const CheckOut = () => {
   const [name, setName] = useState("");
@@ -7,6 +8,7 @@ const CheckOut = () => {
   const [address, setAddress] = useState("");
 
   const [loader, setLoader] = useState(false);
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +22,7 @@ const CheckOut = () => {
       })
       .then(() => {
         setLoader(false);
-        alert("Your order has been submitted👍");
+        swal("Good job!", "Your order placed successfully!!", "success");
       })
       .catch((error) => {
         alert(error.message);
