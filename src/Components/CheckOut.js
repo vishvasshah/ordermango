@@ -6,6 +6,7 @@ const CheckOut = () => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [address, setAddress] = useState("");
+  const [curr , setCurr] = useState(new Date());
 
   const [loader, setLoader] = useState(false);
   
@@ -19,6 +20,7 @@ const CheckOut = () => {
         name: name,
         number: number,
         address: address,
+        curr:  curr
       })
       .then(() => {
         setLoader(false);
@@ -32,6 +34,7 @@ const CheckOut = () => {
     setName("");
     setNumber("");
     setAddress("");
+    setCurr("");
   };
 
   return (
@@ -40,7 +43,7 @@ const CheckOut = () => {
 
       <label>Name</label>
       <input
-        placeholder="Name"
+        placeholder="Name"  className="checkoutform"
         value={name}
         onChange={(e) => setName(e.target.value)}
         required
@@ -48,7 +51,7 @@ const CheckOut = () => {
 
       <label>number</label>
       <input
-        placeholder="number"
+        placeholder="number" className="checkoutform"
         value={number}
         onChange={(e) => setNumber(e.target.value)}
         required
@@ -56,17 +59,24 @@ const CheckOut = () => {
 
       <label>Address</label>
       <textarea
-        placeholder="Address"
+        placeholder="Address"  className="checkoutform"
         value={address}
         onChange={(e) => setAddress(e.target.value)}
       ></textarea>
+      <input
+        placeholder="curr"
+        value={curr}
+        onChange={(e) => setCurr(e.target.value)} hidden
+      />
+      
 
-      <button
+      <button className="checkOut"
         type="submit"
-        style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
+        style={{ background: loader ? "#ccc" : " #f8901c" }}
       >
-        Submit
+        Place your order
       </button>
+    
     </form>
   );
 };

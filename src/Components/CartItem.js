@@ -59,7 +59,9 @@ function CartItem({ itemId, name, imgSrc, price }) {
         <span className="dolorSign">₹</span>{" "}
         <span className="itemPriceValue">{itemPrice}</span>
       </p>
+      
     </div>
+    
   );
 }
 

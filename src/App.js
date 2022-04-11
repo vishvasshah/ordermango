@@ -1,4 +1,6 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Orders from './Components/Orders'
 import { useEffect, useState } from "react";
 import CartItem from './Components/CartItem';
 import Header from "./Components/Header";
@@ -7,6 +9,7 @@ import SubMenuContainer from "./Components/SubMenuContainer";
 import { Items } from "./Components/Data";
 import Checkout from './Components/CheckOut';
 import { useStateValue } from "./Components/StateProvider";
+
 function App() {
   const [isMainData, setMainData] = useState(Items);
   const [{ cart, total }, dispatch] = useStateValue();
@@ -17,11 +20,18 @@ function App() {
   }
 
   return (
+
+    
+
+    
     <div className="App">
-      <Header />
       
+      <Header />
+     
 
       <main>
+
+      
         <div className='mainContainer'>
           <div className="banner">
             
@@ -57,7 +67,7 @@ function App() {
               />
             </div>
           ) : (
-            <div className="cartCheckOutContianer">
+            <div className="cartCheckOutContainer">
               <div className="cartContainer">
                 <SubMenuContainer />
 
@@ -76,13 +86,8 @@ function App() {
                 </div>
                 <Checkout/>
               </div>
-              <div className="totalSection">
-                <h3>Total</h3>
-                <p>
-                  <span>₹ </span> {total}
-                </p>
-              </div>
-              <button className="checkOut">Place your order</button>
+              
+              
               <button className="back" onClick={closemenu}>Back To Home</button>
 
 
@@ -94,13 +99,15 @@ function App() {
       © 2022  All rights reserved
 
 
-      </div>
-          
-      </main>
+      </div>       
+      
+       </main>
       
 
       
     </div>
+    
+    
   );
 }
 
